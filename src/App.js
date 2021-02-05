@@ -5,12 +5,12 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    axios.get("https://yangsikdang.ml:8443/api").then((result) => {
+    axios.get("https://yangsikdang2.ml:8080/api").then((result) => {
       console.log(result);
     });
 
     axios
-      .post("https://yangsikdang.ml:8443/api", { data: "good" })
+      .post("https://yangsikdang2.ml:8080/api", { data: "sent?" })
       .then((result) => {
         console.log(result);
       });
