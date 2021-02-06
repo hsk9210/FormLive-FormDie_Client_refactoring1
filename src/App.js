@@ -4,16 +4,19 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
+  //02.06일자 본 소감.
+  //"https://yangsikdang2.ml:8080/api" / 이건 지우고.
+  //엔진엑스는 내일 집에 가서.
+  //결국 다시 freenom
+  //https://www.freenom.com/en/index.html?lang=en
   useEffect(() => {
-    axios.get("https://yangsikdang2.ml:8080/api").then((result) => {
+    axios.get("http://localhost:3000").then((result) => {
       console.log(result);
     });
 
-    axios
-      .post("https://yangsikdang2.ml:8080/api", { data: "sent?" })
-      .then((result) => {
-        console.log(result);
-      });
+    axios.post("http://localhost:3000", { data: "sent?" }).then((result) => {
+      console.log(result);
+    });
   }, []);
   return (
     <div className="App">
